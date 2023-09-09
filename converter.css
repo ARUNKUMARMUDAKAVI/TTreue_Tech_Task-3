@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    background-color: var(--primary-color);
+  
+    > li {
+      list-style: none;
+    }
+  
+    > a {
+      text-decoration: none;
+    }
+  }
+  
+  :root {
+    --primary-color: hsl(180, 9%, 42%);
+    --secondary-color: hsl(150, 5%, 62%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+  }
+
+  main{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    background-color: var(--secondary-color);
+
+    > section {
+      display: flex;
+      flex-direction: column;
+      width: 30%;
+      padding: 2rem;
+      border-radius: 2rem 2rem 0rem 0rem;
+
+      > span {
+        padding-bottom: 8vh;
+        align-self: center;
+        font-size: 2rem;
+        color: var(--white);
+      }
+
+      > input {
+        padding: .5rem;
+        background-color: var(--white);
+        color: var(--black);
+        border: none;
+        border-radius: .2rem;
+        margin: .5rem;
+      }
+
+      > select {
+        background-color: var(--secondary-color);
+        width: 35%;
+        align-self: self-end;
+        margin: 1rem .5rem;
+        font-size: large;
+        font-weight: bold;
+      }
+
+      > button {
+        background-color: var(--secondary-color);
+        color: var(--black);
+        border: none;
+        border-radius: .2rem;
+        font-size: larger;
+        font-weight: bold;
+        width: 45%;
+        height: 6vh;
+        align-self: center;
+      }
+    }
+  }
+

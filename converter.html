@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Converter</title>
+  <link rel="stylesheet" href="converter.css" />
+</head>
+
+<body>
+  <main>
+    <section>
+      <span>LENGTH CONVERTER</span>
+      <input type="text" id="inputValue" placeholder="METER">
+      <input type="text" id="outputValue" placeholder="RESULT">
+
+      <select id="type">
+        <option value="centimeter">CM</option>
+        <option value="kilometer">KM</option>
+      </select>
+
+      <button onclick="convert()">CONVERT</button>
+    </section>
+
+    <script>
+      var input = document.getElementById('inputValue');
+      var out = document.getElementById('outputValue');
+      var type = document.getElementById('type');
+
+      function convert() {
+        intype = type.value;
+
+        if (intype === "centimeter") {
+          out.value = Number(input.value) * 100;
+        }
+        else if (intype === "kilometer") {
+          out.value = Number(input.value) / 1000;
+        }
+      }
+    </script>
+</body>
+</html>
